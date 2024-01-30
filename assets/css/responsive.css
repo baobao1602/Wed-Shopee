@@ -300,6 +300,9 @@
         margin-left: 0;
     }
     
+    .home-product-item__name {
+        height: 3.3rem;
+    }
 
     .pagination-item__link {
         --height: 30px;
