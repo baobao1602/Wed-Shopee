@@ -280,6 +280,10 @@
         margin-right: 10px;
     }
 
+    .header__search-history-item a {
+        line-height: 20px;
+    }
+
     .home-filter__page {
         display: none;
     }
