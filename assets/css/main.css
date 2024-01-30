@@ -25,7 +25,6 @@
 .header__navbar-user {
     display: flex;
     justify-items: center;
-
 }
 
 
@@ -131,9 +130,10 @@
 .header__navbar-item,
 .header__navbar-item-link
 .header__navbar-icon-link {
-     display: inline-flex;
-     align-items: center;
-
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    border-color: transparent;  
 }
 
 .header__navbar-item:hover,
@@ -369,10 +369,38 @@
     padding-right: 30px;
     border-radius: 5px;
     overflow: hidden;
+    
 }
 
+.modal.open {
+    display: flex;
+}
+
+.modal2.open {
+    display: flex;
+}
+
+.auth-close__icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--primary-color);
+    padding: 5px 10px;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 23px;
+}
+
+.auth-close__icon:hover  {
+    background-color: #e84322;
+    border-radius: 2px;
+    color: var(--white-color);
+}
+
+
+
 .auth-form__container {
-    padding: 0 32px;
+    padding: 30px 10px 0 30px;
 
 }
 
@@ -386,7 +414,7 @@
     font-size: 2.2rem;
     font-weight: 400;
     color: var(--text-color);
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .auth-form__switch-btn {
@@ -746,6 +774,9 @@
     border-left: 1px solid #ccc;
     padding-left: 16px;
     position: relative;
+    border-color: transparent;
+    background-color: transparent;
+
     
 }
 
@@ -792,6 +823,7 @@
     right: 0;
     top: 130%;
     width: 130px;
+    text-align: left;
     list-style: none;
     box-shadow: 0 1px 2px #b3b0b0;
     padding-left: 0;

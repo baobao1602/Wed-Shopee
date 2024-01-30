@@ -12,16 +12,17 @@
         <link rel="stylesheet" href="./assets/font/fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.css">
         <link rel="stylesheet" href="./assets/css/base.css">
         <link rel="stylesheet" href="./assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
     </head>
 
     <body>
-        <div class="app">
+        <div id="app">
             <header class="header">
-               <div class="grid">
+               <div class="grid grid-table">
                     <nav class="header__navbar">
-                        <ul class="header__navbar-list">
+                        <ul class="header__navbar-list grid__colum-2-4 grid__colum-3-0">
                             <li class="header__navbar-item header__navbar-item--qr header__navbar-item--separate">
-                                Vào cửa hàng ứng dụng BaoBao-Shop
+                                <span class="header__navbar-item--caption">Vào cửa hàng ứng dụng BaoBao-Shop</span>
 
                                 <!-- header QR code -->
                                 <div class="header__qr">
@@ -38,7 +39,7 @@
                                 </div>
 
                             </li>
-                            <li class="header__navbar-item">
+                            <li class="header__navbar-item ">
                                 <span class="header__navbar-title--no-poiter">Kết nối</span>
                                 <a href="https://www.facebook.com/bao2004t" class="header__navbar-icon-link">
                                     <i class="header__navbar-icon fa-brands fa-facebook"></i>
@@ -51,12 +52,12 @@
                             </li>
                         </ul>
 
-                        <ul class="header__navbar-list">
-                            <li class="header__navbar-item header__navbar-item--has-notify">
-                                <a href="" class="header__navbar-item-link">
-                                    <i class="header__navbar-icon fa-regular fa-bell"></i>
-                                    Thông báo
-                                </a>
+                        <ul class="header__navbar-list grid_colum-6 ">
+                            <div class="header__navbar-item header__navbar-item--has-notify">
+                                <div href="" class="header__navbar-item-link">
+                                    <i class="header__navbar-icon fa-regular fa-bell header__navbar-item-link"></i>
+                                    <span class="header__navbar-item-link-tablet header__navbar-item-link-mobile">Thông báo</span>
+                                </div>
                                 <div class="header__notify">
                                     <header class="header__notify-header">
                                         <h3>Thông báo mới nhận</h3>
@@ -137,16 +138,18 @@
 
                                 </div>
 
-                            </li>
+                            </div>
                             <li class="header__navbar-item">
                                 <a href="" class="header__navbar-item-link">
                                     <i class="header__navbar-icon fa-regular fa-circle-question"></i>
-                                    Trợ giúp
+                                    <span class="header__navbar-item-link-tablet ">Trợ giúp</span>
                                 </a>
                             </li>
-                            <!-- <li class="header__navbar-item header__navbar-item-strong header__navbar-item--separate">Đăng Ký</li>
-                            <li class="header__navbar-item header__navbar-item-strong">Đăng nhập</li> -->
-                            <li class="header__navbar-item header__navbar-user">
+                            <button class="header__navbar-item header__navbar-item-strong header__navbar-item--separate js-buy-ticket">Đăng Ký</button>
+                            <button class="header__navbar-item header__navbar-item-strong js-buy-ticket-login">Đăng nhập</button>
+
+                            <!-- phần user người dùng đã đăng nhập -->
+                            <!-- <li class="header__navbar-item header__navbar-user">
                                 <img src="./assets/img/anvata.jpg" alt="" class="header__navbar-user-img">
                                 <span class="header__navbar-user-name">BaoBao</span>
 
@@ -167,7 +170,7 @@
                                         <a href="">Đăng xuất</a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> -->
                         </ul>
                     </nav>
 
@@ -205,8 +208,8 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="header__search-select">
-                                <span class="header__search-select-label">Trong shop</span>
+                            <button class="header__search-select">
+                                <span class="header__search-select-label header__search-select-label--mobile">Trong shop</span>
                                 <i class="header__search-select-icon fa-solid fa-sort-down"></i>
                                 
                                 <ul class="header__search-option">
@@ -220,7 +223,7 @@
                                         <i class="fa-solid fa-check"></i>
                                     </li>
                                 </ul>
-                            </div>
+                            </button>
 
                             <button class="header__search-btn">
                                 <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
@@ -1302,12 +1305,15 @@
 
 
 <!-- from đăng kí đăng nhập -->
-        <!-- <div class="modal">
+        <div class="modal js-modal">
             <div class="modal__overlay"></div>
-            <div class="modal__body"> -->
+            <div class="modal__body">
                
                 <!-- regitster form -->
-                    <!-- <div class="auth-form">
+                    <div class="auth-form">
+                        <div class="auth-close__icon js-auth-close__icon">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
                         <div class="auth-form__container">
                             <div class="auth-form__header">
                                 <h3 class="auth-form__heading">Đăng ký</h3>
@@ -1340,7 +1346,7 @@
                                 <button class="btn btn--primary ">ĐĂNG KÝ</button>
                             </div>
                         
-                </div>
+                    </div>
                 <div class="auth-form__socials">
                             <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
                                 <i class="auth-form__socials-icon fa-brands fa-facebook"></i>
@@ -1355,60 +1361,116 @@
                                     Kết nối với Google
                                 </span>
                             </a>
-                </div> -->
+                </div>
                   
-                
-                 <!-- login form -->
-               <!-- <div class="auth-form">
-                    <div class="auth-form__container">
-                        <div class="auth-form__header">
-                            <h3 class="auth-form__heading">Đăng Nhập</h3>
-                            <span class="auth-form__switch-btn">Đăng ký</span>
+            </div>  
+        </div>       
+        
+        <div class="modal2 js-modal2">
+            <div class="modal__overlay"></div>
+                <div class="modal__body">
+               
+                    <!-- login form -->
+                    <div class="auth-form">
 
+                        <div class="auth-close__icon js-auth-close__icon-login">
+                            <i class="fa-solid fa-xmark"></i>
                         </div>
-                    </div>
-                        <div class="auth-form__form">
-                            <div class="auth-form__group">
-                                <input type="text" class="auth-form__input" placeholder="Nhập Email của bạn">
-                            </div>
-                            <div class="auth-form__group">
-                                <input type="text" class="auth-form__input" placeholder="Nhập mật khẩu của bạn">
-                            </div>
-                           
-                        </div>
+                        <div class="auth-form__container">
+                            <div class="auth-form__header">
+                                <h3 class="auth-form__heading">Đăng Nhập</h3>
+                                <span class="auth-form__switch-btn">Đăng ký</span>
 
-                        <div class="auth-form__aside">
-                            <div class="auth-form__help">
-                                <a href="" class="auth-form__help-link auth-form__help-fogot">Quên mật khẩu</a>
-                                <span class="auth-form__help-separate"></span>
-                                <a href="" class="auth-form__help-link ">Cần trợ giúp ?</a>
                             </div>
                         </div>
+                            <div class="auth-form__form">
+                                <div class="auth-form__group">
+                                    <input type="text" class="auth-form__input" placeholder="Nhập Email của bạn">
+                                </div>
+                                <div class="auth-form__group">
+                                    <input type="text" class="auth-form__input" placeholder="Nhập mật khẩu của bạn">
+                                </div>
+                            
+                            </div>
+
+                            <div class="auth-form__aside">
+                                <div class="auth-form__help">
+                                    <a href="" class="auth-form__help-link auth-form__help-fogot">Quên mật khẩu</a>
+                                    <span class="auth-form__help-separate"></span>
+                                    <a href="" class="auth-form__help-link ">Cần trợ giúp ?</a>
+                                </div>
+                            </div>
+                            
+                            <div class="auth-form__controls">
+                                <button class="btn auth-form__controls-back btn--normal">TRỞ LẠI</button>
+                                <button class="btn btn--primary ">ĐĂNG NHẬP</button>
+                            </div>
                         
-                        <div class="auth-form__controls">
-                            <button class="btn auth-form__controls-back btn--normal">TRỞ LẠI</button>
-                            <button class="btn btn--primary ">ĐĂNG NHẬP</button>
+                        </div> 
+                        <div class="auth-form__socials ">
+                            <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                                <i class="auth-form__socials-icon fa-brands fa-facebook"></i>
+                                <span class="auth-form__socials-title">
+                                    Kết nối với Facebook
+                                </span>
+                            </a>
+
+                            <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                                <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                                <span class="auth-form__socials-title">
+                                    Kết nối với Google
+                                </span>
+                            </a>
                         </div>
                     
-                    </div> 
-                    <div class="auth-form__socials ">
-                        <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
-                            <i class="auth-form__socials-icon fa-brands fa-facebook"></i>
-                            <span class="auth-form__socials-title">
-                                Kết nối với Facebook
-                            </span>
-                        </a>
+                </div>  
+            </div>
+           
 
-                        <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
-                            <i class="auth-form__socials-icon fa-brands fa-google"></i>
-                            <span class="auth-form__socials-title">
-                                Kết nối với Google
-                            </span>
-                        </a>
-                    </div> -->
-                
+        <script>
+            const buyBtns = document.querySelector('.js-buy-ticket')
+            const modal = document.querySelector('.js-modal')
+            const modalClose = document.querySelector('.js-auth-close__icon')
 
-            <!-- </div>  
-        </div> -->
+            // hiển thị phần đăng nhập
+            function showBuyTickets() {
+                modal.classList.add('open')
+            }
+
+            // gỡ bỏ, thoát ra phần đăng ký
+            function hideBuyTickets() {
+                modal.classList.remove('open')
+            }
+
+            
+            buyBtns.addEventListener('click', showBuyTickets)
+
+
+            modalClose.addEventListener('click', hideBuyTickets)
+        </script>
+
+        <script>
+            const buyBtn = document.querySelector('.js-buy-ticket-login')
+            const modal2 = document.querySelector('.js-modal2')
+            const modalClose2 = document.querySelector('.js-auth-close__icon-login')
+
+            // hiển thị phần đăng nhập
+            function showBuyTickets() {
+                modal2.classList.add('open')
+            }
+
+            // gỡ bỏ, thoát ra phần đăng ký
+            function hideBuyTickets() {
+                modal2.classList.remove('open')
+            }
+
+            
+            buyBtn.addEventListener('click', showBuyTickets)
+
+
+            modalClose2.addEventListener('click', hideBuyTickets)
+        </script>
+
+        
     </body>
 </html>

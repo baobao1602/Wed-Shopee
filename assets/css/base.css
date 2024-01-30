@@ -25,6 +25,10 @@ html {
 }
 
 
+#app {
+    overflow: hidden;
+
+}
 
 /* responsive */
 .grid {
@@ -66,6 +70,8 @@ html {
 }
 
 
+
+
 /* animation */
 
 @keyframes fadeIn {
@@ -96,9 +102,20 @@ html {
     right: 0;
     bottom: 0;
     left: 0;
-    display: flex;
+    display: none;
     animation: fadeIn linear 0.1s;
 }
+
+.modal2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    animation: fadeIn linear 0.1s;
+}
+
 
 /* lớp phủ mờ  */
 .modal__overlay {
