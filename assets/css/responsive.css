@@ -303,9 +303,9 @@
     
     
 
-    /* .home-product-item__name {
-        height: 3.3rem;
-    } */
+    .home-product-item__name {
+        height: auto;
+    }
 
     .pagination-item__link {
         --height: 30px;
