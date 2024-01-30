@@ -125,12 +125,12 @@
         width: 100%;
     }
 
-    .grid_colum-6 {    
+    .grid_colum-5 {    
         padding-top: 5px;
         padding-left: 5px;
         padding-right: 0px !important;
         padding-bottom: 20px;
-        width: 80%;
+        width: 50%;
     }
 
     .grid__colum-2-4 {
@@ -139,22 +139,23 @@
         width: 33.333%;
     }
 
-    .grid__colum-3-0 {
-        margin-top: 0;
-        padding-left: 5px;
-        padding-right: 5px;
-        padding-bottom: 20px;
-        width: 30% !important;
-    }
+    
 
 
 
-    .header__navbar-list {
-        display: block;
+    .header__navbar-list {    
+        display: flex;
+        text-align: center;
+        justify-content: center;
     }
 
     .header__navbar-item-link-mobile {
         display: none;
+    }
+
+    .header__navbar-icon-link,
+    .header__navbar-title--no-poiter {
+        margin-top: -11px;
     }
 
     .header__navbar-item {
